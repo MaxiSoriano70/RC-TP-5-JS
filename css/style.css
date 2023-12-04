@@ -1,0 +1,80 @@
+:root{
+    --color-principal:#80A7BF;
+    --color-secundario:#3E4C59;
+    --color-terciario:#ACD7F2;
+    --color-apuesto:#BF9880;
+    --color-alternativo-I:#F2DC99;
+    --color-alternativo-II:#BF834E;
+    --color-negro:#0D0908;
+    --color-blanco: #fff;
+    --color-fondo:#E7E1E1;
+}
+
+.b-principal{
+    background-color: var(--color-principal);
+    color: var(--color-negro);
+}
+
+.b-secundario{
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.b-body{
+    background-color: var(--color-fondo);
+    color: var(--color-negro);
+}
+
+.btn-confirmar{
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    transition: 0.2s linear;
+    margin: 0px 5px;
+}
+
+.btn-confirmar:hover{
+    background-color: var(--color-terciario);
+    color: var(--color-negro);
+}
+
+.btn-cancelar{
+    background-color: var(--color-alternativo-II);
+    color: var(--color-negro);
+    transition: 0.2s linear;
+    margin: 0px 5px;
+}
+
+.btn-cancelar:hover{
+    background-color: var(--color-apuesto);
+    color: var(--color-negro);
+}
+
+.btn-pausar{
+    background-color: var(--color-principal);
+    color: var(--color-negro);
+    transition: 0.2s linear;
+    margin: 0px 5px;
+}
+
+.btn-pausar:hover{
+    background-color: var(--color-apuesto);
+    color: var(--color-negro);
+}
+
+.fecha, .hora {
+    flex: 1;
+    width: 100%;
+}
+
+.form-e1{
+    display: none;
+}
+
+/*Ejercicio 1*/
+#btn-enviar-e1{
+    display: none;
+}
+
+#btn-rendirse-e1{
+    display: none;
+}

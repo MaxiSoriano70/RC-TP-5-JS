@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="TP5, DOM BOM"
+    />
+    <meta name="Author" content="Maximiliano Soriano" />
+    <title>TP5 - Maximiliano Soriano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="b-body">
+    <header class="container-fluid d-flex align-items-center justify-content-center py-3 b-principal">
+        <h1>Prácticas con DOM y BOM</h1>
+    </header>
+    <main>
+        <section class="container-fluid px-5 py-3 d-flex flex-column align-items-center justify-content-center">
+            <h2>Actividad 1</h2>
+            <p class="fw-medium">Crea una web con bootstrap y js, que contenga un botón comenzar el juego, en ese momento se crea un número aleatorio que el usuario deberá adivinar, la interfaz del usuario debe tener además un input para ingresar un número y un botón enviar, al presionar el botón enviar mostrar en un alert si el usuario adivino o no el número mágico, si no lo adivino indicarle con un alert si el numero que ingreso es mayor o menor al número mágico.
+            Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que adivino el numero.</p>
+            <div class="d-flex align-items-center justify-content-center flex-column">
+                <p class="fw-bold">Adivina un número del 1 al 10, el número es: <span id="numeroX" class="fw-bold">X</span></p>
+                <p id="mensajeFelicidades" class="fw-bold"></p>
+                <p id="numerosIngresados" class="fw-bold"></p>
+            </div>
+            <form action="">
+                <div class="form-e1 mb-3">
+                    <label for="numero" class="form-label">Numero</label>
+                    <input id="input-e1" type="number" class="form-control" id="numero" min="1" max="10">
+                </div>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button id="btn-comenzar-e1" type="button" class="btn btn-confirmar fw-bold">Comenzar</button>
+                    <button id="btn-rendirse-e1" type="button" class="btn btn-cancelar fw-bold">Rendirse</button>
+                </div>
+            </form>
+        </section>
+        <section class="container-fluid px-5 py-3 d-flex flex-column align-items-center justify-content-center">
+            <h2>Actividad 2</h2>
+            <p class="fw-medium">Crea una clase llamada Persona que siga las siguientes condiciones:
+            Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura, año de nacimiento. Si quieres añadir alguna propiedad extra puedes hacerlo.
+            Los métodos que se debe poder utilizar  son:
+            mostrarGeneracion: este método debe mostrar un mensaje indicando a qué generación pertenece la persona creada y cual es el rasgo característico de esta generación.
+            Para realizar este método tener en cuenta la siguiente tabla de generaciones:
+            esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad.
+            mostrarDatos: devuelve toda la información del objeto.
+            Luego crea la interfaz necesaria para que el usuario pueda crear un objeto persona, permitiendo ingresar las propiedades mediante un formulario, también agregar los botones “mostrar generación”, es “mayor de edad” e indicar en un alert el resultado de la función correspondiente.</p>
+            <div class="d-flex align-items-center justify-content-center">
+                <p class="fw-bold">Eres generación: <span class="fw-bold">Z</span></p>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" class="form-control" id="edad">
+                </div>
+                <div class="mb-3">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="number" class="form-control" id="dni">
+                </div>
+                <div class="mb-3">
+                    <label for="sexo" class="form-label">Sexo</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioSexo" id="radioSexo1" value="masculino">
+                        <label class="form-check-label" for="radioSexo1">
+                            Masculino
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="radioSexo" id="radioSexo2" value="femenino">
+                        <label class="form-check-label" for="radioSexo2">
+                            Femenino
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="peso" class="form-label">Peso</label>
+                    <input type="number" class="form-control" id="peso">
+                </div>
+                <div class="mb-3">
+                    <label for="altura" class="form-label">Altura</label>
+                    <input type="number" class="form-control" id="altura">
+                </div>
+                <div class="mb-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento">
+                </div>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button type="submit" class="btn btn-confirmar fw-bold" onclick="ejercicio1()">Enviar</button>
+                    <button type="reset" class="btn btn-cancelar fw-bold">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <section class="container-fluid px-5 py-3 d-flex flex-column align-items-center justify-content-center">
+            <h2>Actividad 3</h2>
+            <p class="fw-medium">Crea una web con bootstrap y js, que contenga un botón input donde se pueda cargar una tarea y un botón que al ser presionado agregue dicha tarea a una lista, cada elemento ingresado en la lista debe poder ser eliminado con un botón creado para ese fin. </p>
+            <div class="d-flex align-items-center justify-content-center">
+                <p class="fw-bold">Tareas</p>
+            </div>
+            <form action="">
+                <div>
+                    <label for="tarea" class="form-label">Nueva tarea:</label>
+                </div>
+                <textarea name="tarea" id="tarea" cols="30" rows="5"></textarea>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button type="submit" class="btn btn-confirmar fw-bold">Enviar</button>
+                    <button type="reset" class="btn btn-cancelar fw-bold">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <section class="container-fluid px-5 py-3 d-flex flex-column align-items-center justify-content-center">
+            <h2>Actividad 4</h2>
+            <p class="fw-medium">Crear una web con un reloj que muestre la siguiente información: Fecha y hora en AM/PM</p>
+            <article class="d-flex align-items-center justify-content-center flex-column">
+                <div class="fecha d-flex align-items-center justify-content-center p-3 my-1 b-secundario">
+                    <p class="fw-bold m-0">Jueves 29 de Octubre del 2015</p>
+                </div>
+                <div class="hora d-flex align-items-center justify-content-center p-3 my-1 b-secundario">
+                    <p class="fw-bold m-0">12:02:05 PM</p>
+                </div>
+            </article>
+        </section>
+        <section class="container-fluid px-5 py-3 d-flex flex-column align-items-center justify-content-center">
+            <h2>Actividad 5</h2>
+            <p class="fw-medium">Realizar una web con un cronómetro, que tenga las opciones de iniciar, reset (volver el cronómetro a 0) y pausar.</p>
+            <article class="d-flex align-items-center justify-content-center flex-column">
+                <div class="d-flex align-items-center justify-content-center p-3 my-1 b-secundario">
+                    <p class="fw-bold m-0">Cronómetro</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center p-3 my-1 b-secundario">
+                    <p class="fw-bold m-0">12:02:05</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button class="btn btn-confirmar fw-bold">Comenzar</button>
+                    <button class="btn btn-cancelar fw-bold">Reiniciar</button>
+                </div>
+            </article>
+        </section>
+        <section class="container-fluid px-5 py-3 d-flex flex-column align-items-center justify-content-center">
+            <h2>Actividad 6</h2>
+            <p class="fw-medium">Realizar una web con un temporizador donde el usuario pueda ingresar un tiempo desde donde comenzará a decrementar el contador. Debe contener los botones, iniciar, pausar y reset.</p>
+            <article class="d-flex align-items-center justify-content-center flex-column">
+                <div class="mb-3">
+                    <label for="tiempo" class="form-label">Tiempo</label>
+                    <input type="time" class="form-control" id="tiempo">
+                </div>
+                <div class="d-flex align-items-center justify-content-center p-3 my-1 b-secundario">
+                    <p class="fw-bold m-0">--:--:--</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button class="btn btn-confirmar fw-bold">Iniciar</button>
+                    <button class="btn btn-pausar fw-bold">Pausar</button>
+                    <button class="btn btn-cancelar fw-bold">Reiniciar</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="container-fluid b-principal d-flex align-items-center justify-content-center p-3">
+        <p class="fw-bolder m-0">Derechos resarvados Maximiliano Soriano &copy;2023</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/Ejercicio_01.js"></script>
+</body>
+</html>
